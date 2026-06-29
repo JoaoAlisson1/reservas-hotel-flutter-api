@@ -1,6 +1,6 @@
 FROM maven:3.9.6-eclipse-temurin-21 AS build
 WORKDIR /app
-COPY . .
+COPY src/main/java/br/csi/dormez_back_api .
 RUN mvn clean package -DskipTests
 
 FROM eclipse-temurin:21-jdk-jammy
